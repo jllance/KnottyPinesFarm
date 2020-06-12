@@ -20,7 +20,12 @@
                 </div>
                 <div class="col">
                     <h1>Knotty Pine Farm</h1>
-                    <h2> </h2>
+                </div>
+                <div class="col-md-4">
+                    <a role="button" class="btn btn-lg btn-info" id="reserveButton">Reserve Campsite</a>
+                </div>
+                <div class="col-md-2 align-content-end">
+                    <a role="button" class="btn btn-lg btn-info" id="KartButton"><h3>Cart</h3></a>
                 </div>
             </div>
         </div>
@@ -46,27 +51,6 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <div class="row-content">
-                <div class="card-deck">
-                    <div class="card" style="width:400px">
-                        <img class="card-img-top" src="img/barn.jpg" alt="barn">
-                            <div class="card-body">
-                                <h4 class="card-title"><a href="aboutus.html" >Our Family Farm</a></h4>
-                            </div>
-                    </div>
-                    <div class="card" style="width:400px">
-                        <img class="card-img-bottom" src="img/Coop.jpg" alt="Coop">
-                            <div class="card-body">
-                                <h4 class="card-title"><a href="Animals.html">The Coop</h4>
-                            </div>
-                    </div>
-                    </div>
-                </div>
-        </div>
-
-    </div>
-
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -103,11 +87,86 @@
             </div>
         </div>
     </div>
-    </nav>
-    <body>
-        <div>
-
+<div id="reserveModal" class="modal fade" role="dialog">
+<div class= "modal-dialog modal-lg" role="document">
+    <div class= "modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title "> Reserve a Campsite </h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <form>
+                    <div class="form-group row">
+                        <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+                        <!-- Select Dropdown -->
+                        <div class="col">
+                            <select id="numCampers" class="form-control">
+                                <option selected>Select...</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Date -->
+                    <div class="form-group row">
+                        <label for="date" class="col-sm-6 col-form-label">Date</label>
+                        <div class="col">
+                            <input type="date" class="form-control" id="date" name="date" placeholder="Date" />
+                        </div>
+                    </div>
+                    <!--Campsite Type-->
+                    <div class="form-group row">
+                        <label class= "col-sm-6 col-form-label">Campsite Type</label>
+                        <div class="col btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-success active">
+                                <input type="radio" class="form-check-input" name="siteType" id="siteTent" value="tent" autocomplete="off" checked/>Tent
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="radio" class="form-check-input" name="siteType" id="siteRV" value="RV" autocomplete="off"/>RV
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Search Button -->
+                    <div class="form-group row">
+                        <div class="col">
+                            <button type="submit" data-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<body>
+        <div class="container bg-success">
+                <div class="row-content">
+                        <div class="card-deck">
+                            <div class="card" style="width:400px">
+                                <img class="card-img-top" src="img/barn.jpg" alt="barn">
+                                    <div class="card-body">
+                                        <h4 class="card-title"><a href="aboutus.html" >Our Family Farm</a></h4>
+                                    </div>
+                            </div>
+                            <div class="card" style="width:400px">
+                                <img class="card-img-bottom" src="img/Coop.jpg" alt="Coop">
+                                    <div class="card-body">
+                                        <h4 class="card-title"><a href="Animals.html">The Coop</h4>
+                                    </div>
+                            </div>
+                            </div>
+                        </div>
+                </div>
+        
+            </div>
+</body>
             <footer class="site-footer">
                 <div class="container">
                     <div class="row">
