@@ -1,0 +1,11 @@
+$(function(){
+    $("#KartButton").click(function(){
+        $("#KartModal").modal("show");
+    });
+    $("#reserveButton").click(function(){
+        $("#reserveModal").modal("show");
+    });
+    $("#loginButton").click(function(){
+        $("#loginModal").modal("show");
+    });
+});
